@@ -1,0 +1,234 @@
+:root {
+  --sky-1: #8ec5ff;
+  --sky-2: #5db2ff;
+  --sun-yellow: #fff1a8;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --accent: #ffdd57;
+  --text: #042039;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Poppins", Arial, sans-serif;
+  color: var(--text);
+}
+
+body {
+  background: linear-gradient(180deg, var(--sky-1), var(--sky-2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.app {
+  width: 100%;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+}
+
+.search input {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 999px;
+  background: var(--card-bg);
+  font-size: 16px;
+  outline: none;
+}
+
+.search button {
+  background: var(--accent);
+  border: none;
+  border-radius: 999px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.brand-title {
+  font-weight: 700;
+}
+
+.brand-sub {
+  font-size: 12px;
+  color: #06304a;
+}
+
+.card {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.location {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.time {
+  font-size: 13px;
+  color: #17507b;
+}
+
+.temp {
+  font-size: 62px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.desc {
+  font-size: 16px;
+  color: #174053;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.small {
+  font-size: 13px;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.illustration {
+  position: relative;
+  height: 150px;
+  width: 100%;
+}
+
+.sun {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--sun-yellow);
+  box-shadow: 0 0 30px rgba(255, 220, 100, 0.6);
+}
+
+.cloud {
+  position: absolute;
+  background: linear-gradient(180deg, #fff, #dfefff);
+  border-radius: 40px;
+  height: 60px;
+}
+
+.cloud.one {
+  width: 120px;
+  top: 40px;
+  left: 10px;
+}
+
+.cloud.two {
+  width: 90px;
+  top: 80px;
+  right: 30px;
+}
+
+.raindrop {
+  position: absolute;
+  bottom: 10px;
+  width: 2px;
+  height: 18px;
+  border-radius: 2px;
+  background: rgba(6, 63, 124, 0.7);
+  animation: fall 0.7s linear infinite;
+}
+
+.raindrop.two {
+  left: 46%;
+  animation-delay: 0.2s;
+}
+
+.raindrop.three {
+  left: 52%;
+  animation-delay: 0.4s;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-6px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+.day {
+  background: linear-gradient(180deg, #bfe9ff, #8ec5ff);
+}
+
+.dusk {
+  background: linear-gradient(180deg, #ffd89b, #ff9a9e);
+}
+
+.night {
+  background: linear-gradient(180deg, #021124, #042039);
+  color: #cfe8ff;
+}
+
+.note {
+  font-size: 13px;
+  color: #07344f;
+  margin-top: 10px;
+}
+
+@media (max-width: 720px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+  .temp {
+    font-size: 44px;
+  }
+}

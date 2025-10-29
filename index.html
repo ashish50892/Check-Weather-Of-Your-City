@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vibrant Weather App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <div class="top">
+      <div class="search">
+        <input id="query" placeholder="Search city or place (e.g. New Delhi)" />
+        <button id="searchBtn">Search</button>
+      </div>
+      <div class="brand">
+        <div class="brand-title">Vibrant Weather</div>
+        
+      </div>
+    </div>
+
+    <div class="card" id="card">
+      <div class="main">
+        <div class="location" id="location">—</div>
+        <div class="time" id="time">Timestamp: —</div>
+        <div class="row">
+          <div>
+            <div class="temp" id="temp">--°C</div>
+            <div class="desc" id="description">--</div>
+          </div>
+        </div>
+        <div class="meta">
+          <div class="small" id="feels">Feels like: —</div>
+          <div class="small" id="humidity">Humidity: —</div>
+          <div class="small" id="wind">Wind: —</div>
+        </div>
+      </div>
+
+      <div class="side">
+        <div class="illustration">
+          <div class="sun" id="sun"></div>
+          <div class="cloud one" id="cloud1"></div>
+          <div class="cloud two" id="cloud2"></div>
+          <div class="raindrop" id="r1"></div>
+          <div class="raindrop two" id="r2"></div>
+          <div class="raindrop three" id="r3"></div>
+        </div>
+        <div class="small" id="condText">Condition ID: —</div>
+      </div>
+    </div>
+
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
